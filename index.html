@@ -4,46 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First S3 Website</title>
+    <title>Cloud Computing Website</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
-            padding: 80px 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #232f3e;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
             color: #ff9900;
         }
 
-        p {
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #232f3e, #146eb4);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
             font-size: 18px;
-            color: #333;
+            margin-bottom: 30px;
         }
 
         button {
-            background-color: #232f3e;
-            color: white;
-            padding: 12px 24px;
+            padding: 12px 25px;
+            background: #ff9900;
+            color: #232f3e;
             border: none;
             border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000012;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #146eb4;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to My AWS S3 Website!</h1>
+    <header>
+        <h2>CloudZone</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+        </nav>
+    </header>
 
-    <p>This static website is hosted on Amazon S3.</p>
+    <section class="hero" id="home">
+        <h1>Welcome to CloudZone</h1>
+        <p>Learn cloud computing and explore the power of AWS.</p>
+        <button onclick="showInfo()">Explore More</button>
+    </section>
 
-    <button onclick="showMessage()">Click Me</button>
+    <section class="services" id="services">
+        <div class="card">
+            <h3>Amazon S3</h3>
+            <p>Store and serve files using scalable cloud object storage.</p>
+        </div>
+
+        <div class="card">
+            <h3>Amazon EC2</h3>
+            <p>Run applications using virtual servers in the cloud.</p>
+        </div>
+
+        <div class="card">
+            <h3>AWS Lambda</h3>
+            <p>Run code without managing servers.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hosted on Amazon S3 | CloudZone 2026</p>
+    </footer>
 
     <script>
-        function showMessage() {
-            alert("Hello! My S3 website is working successfully.");
+        function showInfo() {
+            alert("Welcome! This website is hosted on Amazon S3.");
         }
     </script>
 </body>
